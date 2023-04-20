@@ -86,19 +86,26 @@
 		</div>
 		</div>
 
-		<div class="row justify-content-center mt-5">
+		<div class="row justify-content-flex-start mt-6">
 		<div class="col-md-8 col-lg-6">
 			<div class="card">
-			<div class="card-body">
-				<div class="form-group">
-				<label for="price-meter">Price Range:</label>
-				<br>
-				<input type="range" class="custom-range" min="0" max="100" step="1" id="price-meter">
+			<div class="card-body d-flex">
+
+				<div class="form-group mr-3 w-100">
+				<label for="price-dropdown">Price Range:</label>
+				<select class="form-control w-100" id="price-dropdown">
+					<option value="0">Choose</option>
+					<option value="1">100 - 500</option>
+					<option value="2">500 - 1000</option>
+					<option value="3">1000 - 1500</option>
+					<option value="4">1500 - 2000</option>
+				</select>
 				</div>
-				<div class="form-group">
+
+				<div class="form-group mr-3 w-100">
 				<label for="rating-dropdown">Rating:</label>
-				<select class="form-control" id="rating-dropdown">
-					<option>All Ratings</option>
+				<select class="form-control w-100" id="rating-dropdown">
+					<option>Choose</option>
 					<option>1 Star</option>
 					<option>2 Stars</option>
 					<option>3 Stars</option>
@@ -106,30 +113,31 @@
 					<option>5 Stars</option>
 				</select>
 				</div>
-				<div class="form-group">
+
+				<div class="form-group mr-3 w-100">
 				<label for="location-dropdown">Location:</label>
-				<select class="form-control" id="location-dropdown">
-					<option>All Locations</option>
+				<select class="form-control w-100" id="location-dropdown">
+					<option>Choose</option>
 					<option>City A</option>
 					<option>City B</option>
 					<option>City C</option>
 				</select>
 				</div>
-				<div class="form-group">
+
+				<div class="form-group w-100">
 				<label for="more-dropdown">More:</label>
-				<select class="form-control" id="more-dropdown">
-					<option>All</option>
+				<select class="form-control w-100" id="more-dropdown">
+					<option>Choose</option>
 					<option>Swimming Pool</option>
 					<option>Free Wi-Fi</option>
 					<option>Pet-friendly</option>
 				</select>
 				</div>
-			
-			
 			</div>
 			</div>
 		</div>
 		</div>
+
 		<div class="container mt-4">
 		<div class="row">
 			<div class="col-md-3 mb-3">
@@ -212,9 +220,11 @@
   		</div>
 	</footer>
 
+
+	<script src="js/app.js"></script>
 	<!-- Bootstrap JS and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
