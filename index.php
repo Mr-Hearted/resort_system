@@ -206,9 +206,10 @@ $result = mysqli_query($conn, $query);
           <h5 class="card-title"><?php echo $row['name']; ?></h5>
           <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>
           <p class="card-text">Location: <?php echo $row['address']; ?></p>
-          <p class="card-text">Rooms available: <?php echo $row['room']; ?></p>
+          <p class="card-text">Rooms available: <?php echo $row['rooms']; ?></p>
+		  <p class="card-text">Contact Info: <?php echo $row['phone']; ?></p>
 		  <p class="card-text">Description: <?php echo $row['description']; ?></p>
-		  
+
           <p class="card-text">Price: <?php echo $row['price']; ?>/night</p>
           <a href="#" class="btn btn-primary">Make a reservation</a>
         </div>

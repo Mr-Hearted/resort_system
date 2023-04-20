@@ -45,9 +45,9 @@ if (isset($_POST['submit'])) {
 	}
 
 	// Insert hotel information into the database
-	$query = "INSERT INTO hotels(name, address, room, phone, price, rating, description, image) VALUES (?, ?, ?, ?, ?, ?, ?)";
+	$query = "INSERT INTO hotels(name, address, rooms, phone, price, rating, description, image) VALUES (?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $conn->prepare($query);
-	$stmt->bind_param("sssssss", $hotel_name, $hotel_address, $hote_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url);
+	$stmt->bind_param("sssssss", $hotel_name, $hotel_address, $hotel_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url);
 
 	if ($stmt->execute()) {
 		header("Location: ../index.php");
