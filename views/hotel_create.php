@@ -1,4 +1,24 @@
 <?php
+// Start the session
+session_start();
+
+// If user is not logged in, redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}
+// Connect to the database
+$conn = mysqli_connect("localhost", "root", "", "login_system");
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Retrieve hotels data
+$query = "SELECT * FROM hotels";
+$result = mysqli_query($conn, $query);
+
 	// Include add_hotel.php file
 	require_once "../php/add_hotel.php";
 ?>
