@@ -3,12 +3,13 @@
 <head>
 	<title>Resort Reserver</title>
 	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Resort Reserver</a>
+		<a class="navbar-brand" href="#">Resort Reserveration System</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -34,192 +35,136 @@
 			</ul>
 		</div>
 	</nav>
-
-	<section class="search-section mt-5">
-	<div class="container">
-			<div class="row">
-		<div class="col-md-12">
-			<form>
-			<div class="form-row align-items-center">
-				<div class="col-md-3 d-inline">
-				<label class="sr-only" for="inlineFormInputGroup">Search</label>
-				<div class="input-group mb-2">
-					<div class="input-group-prepend">
-					<div class="input-group-text"><i class="fa fa-search"></i></div>
-					</div>
-					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+	
+	<div class="container my-4">
+	<div class="row mb-4">
+		<div class="col-md-8">
+		<form class="form-inline">
+			<div class="form-group mr-2">
+			<div class="input-group">
+				<div class="input-group-prepend">
+				<div class="input-group-text"><i class="fas fa-search"></i></div>
 				</div>
-				</div>
-				<div class="col-md-2 d-inline">
-				<label class="sr-only" for="inlineFormInputGroup">Check In</label>
-				<div class="input-group mb-2">
-					<div class="input-group-prepend">
-					<div class="input-group-text"><i class="fa fa-calendar-check-o"></i></div>
-					</div>
-					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Check In">
-				</div>
-				</div>
-				<div class="col-md-2 d-inline">
-				<label class="sr-only" for="inlineFormInputGroup">Check Out</label>
-				<div class="input-group mb-2">
-					<div class="input-group-prepend">
-					<div class="input-group-text"><i class="fa fa-calendar-check-o"></i></div>
-					</div>
-					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Check Out">
-				</div>
-				</div>
-				<div class="col-md-2 d-inline">
-				<label class="sr-only" for="inlineFormInputGroup">Number of Rooms</label>
-				<div class="input-group mb-2">
-					<div class="input-group-prepend">
-					<div class="input-group-text"><i class="fa fa-bed"></i></div>
-					</div>
-					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Number of Rooms">
-				</div>
-				</div>
-				
-				<div class="col-md-3 d-inline-block">
-				<button type="submit" class="btn btn-primary mb-2">Search</button>
-				</div>
-			</div>
-			</form>
-		</div>
-		</div>
-
-		<div class="row justify-content-flex-start mt-6">
-		<div class="col-md-8 col-lg-6">
-			<div class="card">
-			<div class="card-body d-flex">
-
-				<div class="form-group mr-3 w-100">
-				<label for="price-dropdown">Price Range:</label>
-				<select class="form-control w-100" id="price-dropdown">
-					<option value="0">Choose</option>
-					<option value="1">100 - 500</option>
-					<option value="2">500 - 1000</option>
-					<option value="3">1000 - 1500</option>
-					<option value="4">1500 - 2000</option>
-				</select>
-				</div>
-
-				<div class="form-group mr-3 w-100">
-				<label for="rating-dropdown">Rating:</label>
-				<select class="form-control w-100" id="rating-dropdown">
-					<option>Choose</option>
-					<option>1 Star</option>
-					<option>2 Stars</option>
-					<option>3 Stars</option>
-					<option>4 Stars</option>
-					<option>5 Stars</option>
-				</select>
-				</div>
-
-				<div class="form-group mr-3 w-100">
-				<label for="location-dropdown">Location:</label>
-				<select class="form-control w-100" id="location-dropdown">
-					<option>Choose</option>
-					<option>City A</option>
-					<option>City B</option>
-					<option>City C</option>
-				</select>
-				</div>
-
-				<div class="form-group w-100">
-				<label for="more-dropdown">More:</label>
-				<select class="form-control w-100" id="more-dropdown">
-					<option>Choose</option>
-					<option>Swimming Pool</option>
-					<option>Free Wi-Fi</option>
-					<option>Pet-friendly</option>
-				</select>
-				</div>
+				<input type="text" class="form-control" placeholder="Search">
 			</div>
 			</div>
-		</div>
-		</div>
-
-		<div class="container mt-4">
-		<div class="row">
-			<div class="col-md-3 mb-3">
+			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Sort By
+				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-bed"></i> Rooms
 				</button>
-				<div class="dropdown-menu" aria-labelledby="sortDropdownMenuButton">
-				<a class="dropdown-item" href="#">Price: Low to High</a>
-				<a class="dropdown-item" href="#">Price: High to Low</a>
-				<a class="dropdown-item" href="#">Rating: Low to High</a>
-				<a class="dropdown-item" href="#">Rating: High to Low</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
+				<!-- Room options here -->
+					<a class="dropdown-item" href="#">Single Room</a>
+					<a class="dropdown-item" href="#">Double Room</a>
+					<a class="dropdown-item" href="#">Family Size Room</a>
 				</div>
 			</div>
 			</div>
-			<div class="col-md-9">
-			<div class="row">
-				<div class="col-md-4 mb-4">
-				<div class="card">
-					<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
-					<div class="card-body">
-					<h5 class="card-title">Resort Name</h5>
-					<p class="card-text">Rating: 4.5</p>
-					<p class="card-text">Rooms Available: 10</p>
-					<p class="card-text">Rooms Occupied: 5</p>
-					<p class="card-text">Price: $50/night</p>
-					<a href="#" class="btn btn-primary"><i class="fa fa-heart"></i> Add to Favorites</a>
-					</div>
-				</div>
-				</div>
-				<div class="col-md-4 mb-4">
-				<div class="card">
-					<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
-					<div class="card-body">
-					<h5 class="card-title">Resort Name</h5>
-					<p class="card-text">Rating: 4.5</p>
-					<p class="card-text">Rooms Available: 10</p>
-					<p class="card-text">Rooms Occupied: 5</p>
-					<p class="card-text">Price: $50/night</p>
-					<a href="#" class="btn btn-primary"><i class="fa fa-heart"></i> Add to Favorites</a>
-					</div>
-				</div>
-				</div>
-				<div class="col-md-4 mb-4">
-				<div class="card">
-					<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
-					<div class="card-body">
-					<h5 class="card-title">Resort Name</h5>
-					<p class="card-text">Rating: 4.5</p>
-					<p class="card-text">Rooms Available: 10</p>
-					<p class="card-text">Rooms Occupied: 5</p>
-					<p class="card-text">Price: $50/night</p>
-					<a href="#" class="btn btn-primary"><i class="fa fa-heart"></i> Add to Favorites</a>
-					</div>
-				</div>
+			<div class="form-group mr-2">
+			<div class="dropdown">
+				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-home mr-2"></i> Cottage
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
+				<!-- Cottage options here -->
+					<a class="dropdown-item" href="#">Small</a>
+					<a class="dropdown-item" href="#">Medium</a>
+					<a class="dropdown-item" href="#">Large</a>
 				</div>
 			</div>
 			</div>
-		</div>
+			<div class="form-group mr-2">
+			<div class="dropdown">
+				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-dollar-sign"></i> Price
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownPrice">
+				<!-- Price options here -->
+					<a class="dropdown-item" href="#">100-500</a>
+					<a class="dropdown-item" href="#">500-1000</a>
+					<a class="dropdown-item" href="#">1000-1500</a>
+					<a class="dropdown-item" href="#">1500-2000</a>
+				</div>
+			</div>
+			</div>
+			<button type="submit" class="btn btn-primary"><i class="fas fa-search mr-2"></i>Search</button>
+		</form>
 		</div>
 	</div>
-	</section>
+	<div class="row">
+		<div class="row mt-4">
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
+					<div class="card-body">
+						<h5 class="card-title">Resort 1</h5>
+						<p class="card-text">Rating: 4.5 stars</p>
+						<p class="card-text">Location: Forest</p>
+						<p class="card-text">Rooms available: 10/15</p>
+						<p class="card-text">Cottages available: 5/5</p>
+						<p class="card-text">Price: ₱500/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
+					<div class="card-body">
+						<h5 class="card-title">Resort 2</h5>
+						<p class="card-text">Rating: 4.2 stars</p>
+						<p class="card-text">Location: Mountain view</p>
+						<p class="card-text">Rooms available: 8/10</p>
+						<p class="card-text">Cottages available: 3/5</p>
+						<p class="card-text">Price: ₱1000/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
+					<div class="card-body">
+						<h5 class="card-title">Resort 3</h5>
+						<p class="card-text">Rating: 4.8 stars</p>
+						<p class="card-text">Location: Beachfront</p>
+						<p class="card-text">Rooms available: 12/15</p>
+						<p class="card-text">Cottages available: 2/5</p>
+						<p class="card-text">Price: ₱1500/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
+		<!-- Repeat above image card divs to add more images -->
+	</div>
+	</div>
 
 	
-	
-	<footer class="bg-light py-4">
-  		<div class="container">
-    		<div class="row">
-      			<div class="col-md-6">
-        			<p>&copy; 2023 Resort Reserver. All rights reserved.</p>
-      			</div>
-      			<div class="col-md-6 text-md-right">
-        		<ul class="list-inline">
-          			<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-          			<li class="list-inline-item"><a href="#">Terms of Use</a></li>
-          			<li class="list-inline-item"><a href="#">Contact Us</a></li>
-        		</ul>
-      			</div>
-    		</div>
-  		</div>
-	</footer>
+				
 
+
+	<div class="wrapper">
+    <div class="content">
+        <!-- your content here -->
+    </div>
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Resort Reserver. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+	</div>
 
 	<script src="js/app.js"></script>
 	<!-- Bootstrap JS and jQuery -->
