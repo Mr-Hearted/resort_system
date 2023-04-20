@@ -1,6 +1,8 @@
 # resort_system
 
 
+
+# Run this on phpMyAdmin SQL query to create database
 CREATE TABLE hotels (
   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,

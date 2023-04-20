@@ -108,8 +108,8 @@ $result = mysqli_query($conn, $query);
 	</div>
 	<div class="row">
 		<div class="row mt-4">
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
 						<h5 class="card-title">Resort 1</h5>
@@ -122,8 +122,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -136,8 +136,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
@@ -151,8 +151,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 				</div>
 		<!-- Repeat above image card divs to add more images -->
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
 						<h5 class="card-title">Resort 1</h5>
@@ -165,8 +165,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -179,8 +179,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
@@ -224,7 +224,7 @@ $result = mysqli_query($conn, $query);
 mysqli_close($conn);
 ?>
 
-<footer class="bg-light py-4">
+<footer class="py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
