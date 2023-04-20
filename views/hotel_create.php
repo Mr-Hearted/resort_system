@@ -18,6 +18,9 @@
 		<label>Hotel Address:</label>
 		<input type="text" name="hotel_address" required><br><br>
 
+        <label>Hotel Room:</label>
+		<input type="text" name="hotel_room" required><br><br>
+
 		<label>Hotel Phone:</label>
 		<input type="text" name="hotel_phone" required><br><br>
 
