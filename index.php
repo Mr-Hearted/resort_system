@@ -197,19 +197,26 @@ $result = mysqli_query($conn, $query);
 	</div>
 
 <!-- Display hotels data -->
-<div class="hotels">
+<div class="row">
   <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-    <div class="hotel">
-      <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
-      <h2><?php echo $row['name']; ?></h2>
-      <p><?php echo $row['address']; ?></p>
-      <p><?php echo $row['price']; ?></p>
-      <p><?php echo $row['rating']; ?></p>
-      <p><?php echo $row['description']; ?></p>
-      <p><?php echo $row['phone']; ?></p>
+    <div class="col-md-4 mb-4">
+      <div class="card shadow">
+        <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $row['name']; ?></h5>
+          <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>
+          <p class="card-text">Location: <?php echo $row['address']; ?></p>
+          <p class="card-text">Rooms available: <?php echo $row['room']; ?></p>
+		  <p class="card-text">Description: <?php echo $row['description']; ?></p>
+		  
+          <p class="card-text">Price: <?php echo $row['price']; ?>/night</p>
+          <a href="#" class="btn btn-primary">Make a reservation</a>
+        </div>
+      </div>
     </div>
   <?php } ?>
 </div>
+
 
 <?php
 // Close connection
