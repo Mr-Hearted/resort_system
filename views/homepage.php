@@ -121,8 +121,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -135,8 +135,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
@@ -150,8 +150,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					</div>
 				</div>
 		<!-- Repeat above image card divs to add more images -->
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4  mb-4">
+					<div class="card shadow">
 					<img src="../img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
 						<h5 class="card-title">Resort 1</h5>
@@ -164,8 +164,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -178,8 +178,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
