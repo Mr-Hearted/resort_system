@@ -137,34 +137,68 @@
 					</div>
 				</div>
 		<!-- Repeat above image card divs to add more images -->
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
+					<div class="card-body">
+						<h5 class="card-title">Resort 1</h5>
+						<p class="card-text">Rating: 4.5 stars</p>
+						<p class="card-text">Location: Forest</p>
+						<p class="card-text">Rooms available: 10/15</p>
+						<p class="card-text">Cottages available: 5/5</p>
+						<p class="card-text">Price: ₱500/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
+					<div class="card-body">
+						<h5 class="card-title">Resort 2</h5>
+						<p class="card-text">Rating: 4.2 stars</p>
+						<p class="card-text">Location: Mountain view</p>
+						<p class="card-text">Rooms available: 8/10</p>
+						<p class="card-text">Cottages available: 3/5</p>
+						<p class="card-text">Price: ₱1000/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
+					<div class="card-body">
+						<h5 class="card-title">Resort 3</h5>
+						<p class="card-text">Rating: 4.8 stars</p>
+						<p class="card-text">Location: Beachfront</p>
+						<p class="card-text">Rooms available: 12/15</p>
+						<p class="card-text">Cottages available: 2/5</p>
+						<p class="card-text">Price: ₱1500/night</p>
+						<a href="#" class="btn btn-primary">Make a reservation</a>
+					</div>
+					</div>
+				</div>
 	</div>
 	</div>
 
-	
-				
-
-
-	<div class="wrapper">
-    <div class="content">
-        <!-- your content here -->
+<footer class="bg-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2023 Resort Reserver. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-right">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
     </div>
-    <footer class="bg-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023 Resort Reserver. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-right">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
-                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-	</div>
+  </div>
+</footer>
+
 
 	<script src="js/app.js"></script>
 	<!-- Bootstrap JS and jQuery -->
