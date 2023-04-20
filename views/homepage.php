@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-bed"></i> Rooms
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -88,7 +88,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-home mr-2"></i> Cottage
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -101,7 +101,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-dollar-sign"></i> Price
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownPrice">
@@ -113,7 +113,7 @@ $result = mysqli_query($conn, $query);
 				</div>
 			</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Search</button>
+			<button type="submit" class="btn btn-primary btn-light">Search</button>
 		</form>
 		</div>
 	</div>
@@ -133,8 +133,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -147,8 +147,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
@@ -162,8 +162,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 				</div>
 		<!-- Repeat above image card divs to add more images -->
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4  mb-4">
+					<div class="card shadow">
 					<img src="../img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
 						<h5 class="card-title">Resort 1</h5>
@@ -176,8 +176,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
 						<h5 class="card-title">Resort 2</h5>
@@ -190,8 +190,8 @@ $result = mysqli_query($conn, $query);
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
 						<h5 class="card-title">Resort 3</h5>
