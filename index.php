@@ -1,3 +1,17 @@
+<?php
+// Connect to the database
+$conn = mysqli_connect("localhost", "root", "", "login_system");
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Retrieve hotels data
+$query = "SELECT * FROM hotels";
+$result = mysqli_query($conn, $query);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -181,6 +195,26 @@
 				</div>
 	</div>
 	</div>
+
+<!-- Display hotels data -->
+<div class="hotels">
+  <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+    <div class="hotel">
+      <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
+      <h2><?php echo $row['name']; ?></h2>
+      <p><?php echo $row['address']; ?></p>
+      <p><?php echo $row['price']; ?></p>
+      <p><?php echo $row['rating']; ?></p>
+      <p><?php echo $row['description']; ?></p>
+      <p><?php echo $row['phone']; ?></p>
+    </div>
+  <?php } ?>
+</div>
+
+<?php
+// Close connection
+mysqli_close($conn);
+?>
 
 <footer class="bg-light py-4">
   <div class="container">
