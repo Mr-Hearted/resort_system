@@ -1,6 +1,6 @@
 <?php
 	// Include config file
-	require_once "config.php";
+	require_once "../php/config.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Register</h1>
-	<form action="register_process.php" method="post">
+	<form action="../php/register_process.php" method="post">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required><br><br>
     <label for="password">Password:</label>

@@ -3,7 +3,7 @@
 	
 	// Check if the user is already logged in, if yes then redirect to home page
 	if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-	    header("location: index.php");
+	    header("location: ../views/homepage.php");
 	    exit;
 	}
 	
@@ -63,7 +63,7 @@
 	                            $_SESSION["username"] = $username;                            
 	                            
 	                            // Redirect user to home page
-	                            header("location: index.php");
+	                            header("location: ../views/homepage.php");
 	                        } else{
 	                            // Display an error message if password is not valid
 	                            $password_err = "The password you entered was not valid.";
