@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $query);
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="home-body">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">Resort Reserveration System</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $query);
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="views/login.php">Login</a>
+					<a class="nav-link text-primary" href="views/login.php">Login</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,7 +43,7 @@ $result = mysqli_query($conn, $query);
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">
-						<i class="fas fa-heart"></i> Favorites
+						<i class="far fa-heart"></i> Favorites
 					</a>
 				</li>
 			</ul>
@@ -64,7 +64,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-bed"></i> Rooms
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -77,7 +77,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-home mr-2"></i> Cottage
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -90,7 +90,7 @@ $result = mysqli_query($conn, $query);
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-dollar-sign"></i> Price
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownPrice">
@@ -102,7 +102,7 @@ $result = mysqli_query($conn, $query);
 				</div>
 			</div>
 			</div>
-			<button type="submit" class="btn btn-primary"><i class="fas fa-search mr-2"></i>Search</button>
+			<button type="submit" class="btn btn-primary btn-light">Search</button>
 		</form>
 		</div>
 	</div>

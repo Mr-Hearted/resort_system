@@ -22,7 +22,7 @@
 					<div class="card-body">
 						<form action="../php/add_hotel.php" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="hotel_name">Resort Name:</label>
+								<label for="hotel_name">Hotel Name:</label>
 								<input type="text" name="hotel_name" id="hotel_name" class="form-control" required>
 							</div>
 							<div class="form-group">
@@ -38,7 +38,7 @@
 								<input type="text" name="hotel_phone" id="hotel_phone" class="form-control" required>
 							</div>
 							<div class="form-group">
-								<label for="hotel_price">Room Price:</label>
+								<label for="hotel_price">Resort Price:</label>
 								<input type="text" name="hotel_price" id="hotel_price" class="form-control" required>
 							</div>
 							<div class="form-group">
