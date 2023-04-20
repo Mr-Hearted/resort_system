@@ -16,11 +16,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="home-body">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">Resort Reserveration System</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,14 +101,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 			</div>
-			<button type="submit" class="btn btn-primary"><i class="fas fa-search mr-2"></i>Search</button>
+			<button type="submit" class="btn btn-primary">Search</button>
 		</form>
 		</div>
 	</div>
 	<div class="row">
 		<div class="row mt-4">
-				<div class="col-md-4">
-					<div class="card">
+				<div class="col-md-4 mb-4">
+					<div class="card shadow">
 					<img src="../img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
 						<h5 class="card-title">Resort 1</h5>
@@ -195,11 +195,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	</div>
 	</div>
 
-<footer class="bg-light py-4">
+<footer class="py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p>&copy; 2023 Resort Reserver. All rights reserved.</p>
+        <p>&copy; 2023 Resort Management. All rights reserved.</p>
       </div>
       <div class="col-md-6 text-md-right">
         <ul class="list-inline">
