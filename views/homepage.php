@@ -171,7 +171,7 @@ $result = mysqli_query($conn, $query);
   <?php while ($row = mysqli_fetch_assoc($result)) { ?>
     <div class="col-md-4 mb-4">
       <div class="card shadow">
-        <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>">
+        <img src="../<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>">
         <div class="card-body">
           <h5 class="card-title"><?php echo $row['name']; ?></h5>
           <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>

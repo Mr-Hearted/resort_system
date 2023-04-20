@@ -7,6 +7,8 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+$image_path = dirname(__DIR__) . '/images/hotels/';
+
 if (isset($_POST['submit'])) {
     $hotel_name = $_POST['hotel_name'];
     $hotel_address = $_POST['hotel_address'];
@@ -23,7 +25,7 @@ if (isset($_POST['submit'])) {
         $file_tmp = $_FILES['hotel_image']['tmp_name'];
         $file_type = $_FILES['hotel_image']['type'];
         $file_ext = strtolower(end(explode('.', $_FILES['hotel_image']['name'])));
-
+        
         $extensions = array("jpeg", "jpg", "png");
 
         if (in_array($file_ext, $extensions) === false) {
@@ -35,7 +37,7 @@ if (isset($_POST['submit'])) {
         }
 
         if (empty($errors) == true) {
-            move_uploaded_file($file_tmp, "../images/hotels/" . $file_name);
+            move_uploaded_file($file_tmp, $image_path . $file_name);
             $image_url = "images/hotels/" . $file_name;
         } else {
             print_r($errors);
