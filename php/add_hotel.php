@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 		}
 
 		if (empty($errors) == true) {
-			move_uploaded_file($file_tmp, "images/hotels/" . $file_name);
+			move_uploaded_file($file_tmp, "../images/hotels/" . $file_name);
 			$image_url = "images/hotels/" . $file_name;
 		} else {
 			print_r($errors);
