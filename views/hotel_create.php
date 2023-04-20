@@ -42,7 +42,7 @@ $result = mysqli_query($conn, $query);
 					<div class="card-body">
 						<form action="../php/add_hotel.php" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="hotel_name">Hotel Name:</label>
+								<label for="hotel_name">Resort Name:</label>
 								<input type="text" name="hotel_name" id="hotel_name" class="form-control" required>
 							</div>
 							<div class="form-group">

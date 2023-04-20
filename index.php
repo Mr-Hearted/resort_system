@@ -69,8 +69,9 @@ $result = mysqli_query($conn, $query);
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
 				<!-- Room options here -->
-					<a class="dropdown-item" href="#">Single Room</a>
-					<a class="dropdown-item" href="#">Double Room</a>
+				<a class="dropdown-item" href="#">Standand Room</a>
+					<a class="dropdown-item" href="#">Deluxe Room</a>
+					<a class="dropdown-item" href="#">Family Size Room</a>
 					<a class="dropdown-item" href="#">Family Size Room</a>
 				</div>
 			</div>
@@ -82,9 +83,9 @@ $result = mysqli_query($conn, $query);
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
 				<!-- Cottage options here -->
-					<a class="dropdown-item" href="#">Small</a>
-					<a class="dropdown-item" href="#">Medium</a>
-					<a class="dropdown-item" href="#">Large</a>
+				<a class="dropdown-item" href="#">Standard Room</a>
+					<a class="dropdown-item" href="#">Deluxe Room</a>
+					<a class="dropdown-item" href="#">None</a>
 				</div>
 			</div>
 			</div>
@@ -112,7 +113,7 @@ $result = mysqli_query($conn, $query);
 					<div class="card shadow">
 					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
 					<div class="card-body">
-						<h5 class="card-title">Resort 1</h5>
+						<h5 class="card-title">Example Resort 1</h5>
 						<p class="card-text">Rating: 4.5 stars</p>
 						<p class="card-text">Location: Forest</p>
 						<p class="card-text">Rooms available: 10/15</p>
@@ -126,7 +127,7 @@ $result = mysqli_query($conn, $query);
 					<div class="card shadow">
 					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
 					<div class="card-body">
-						<h5 class="card-title">Resort 2</h5>
+						<h5 class="card-title">Example Resort 2</h5>
 						<p class="card-text">Rating: 4.2 stars</p>
 						<p class="card-text">Location: Mountain view</p>
 						<p class="card-text">Rooms available: 8/10</p>
@@ -140,7 +141,7 @@ $result = mysqli_query($conn, $query);
 					<div class="card shadow">
 					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
 					<div class="card-body">
-						<h5 class="card-title">Resort 3</h5>
+						<h5 class="card-title">Example Resort 3</h5>
 						<p class="card-text">Rating: 4.8 stars</p>
 						<p class="card-text">Location: Beachfront</p>
 						<p class="card-text">Rooms available: 12/15</p>
@@ -151,48 +152,6 @@ $result = mysqli_query($conn, $query);
 					</div>
 				</div>
 		<!-- Repeat above image card divs to add more images -->
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
-					<div class="card-body">
-						<h5 class="card-title">Resort 1</h5>
-						<p class="card-text">Rating: 4.5 stars</p>
-						<p class="card-text">Location: Forest</p>
-						<p class="card-text">Rooms available: 10/15</p>
-						<p class="card-text">Cottages available: 5/5</p>
-						<p class="card-text">Price: ₱500/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
-					<div class="card-body">
-						<h5 class="card-title">Resort 2</h5>
-						<p class="card-text">Rating: 4.2 stars</p>
-						<p class="card-text">Location: Mountain view</p>
-						<p class="card-text">Rooms available: 8/10</p>
-						<p class="card-text">Cottages available: 3/5</p>
-						<p class="card-text">Price: ₱1000/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
-					<div class="card-body">
-						<h5 class="card-title">Resort 3</h5>
-						<p class="card-text">Rating: 4.8 stars</p>
-						<p class="card-text">Location: Beachfront</p>
-						<p class="card-text">Rooms available: 12/15</p>
-						<p class="card-text">Cottages available: 2/5</p>
-						<p class="card-text">Price: ₱1500/night</p>
-						<a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
 	</div>
 	</div>
 
