@@ -1,13 +1,8 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.home-body {
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.content {
-    flex: 1;
-}
+footer .list-inline-item a {
+    color: black;
+  }
