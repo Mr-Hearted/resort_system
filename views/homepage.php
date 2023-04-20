@@ -63,7 +63,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-bed"></i> Rooms
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -76,7 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-home mr-2"></i> Cottage
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
@@ -89,7 +89,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 			</div>
 			<div class="form-group mr-2">
 			<div class="dropdown">
-				<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-dollar-sign"></i> Price
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownPrice">
@@ -101,7 +101,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Search</button>
+			<button type="submit" class="btn btn-outline-secondary text-light">Search</button>
 		</form>
 		</div>
 	</div>
