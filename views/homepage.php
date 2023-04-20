@@ -101,7 +101,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 				</div>
 			</div>
 			</div>
-			<button type="submit" class="btn btn-outline-secondary text-light">Search</button>
+			<button type="submit" class="btn btn-primary btn-light">Search</button>
 		</form>
 		</div>
 	</div>
