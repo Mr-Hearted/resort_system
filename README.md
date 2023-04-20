@@ -1,6 +1,6 @@
 # resort_system
 
-
+# Run this for the user database
 
 # Run this on phpMyAdmin SQL query to create database
 CREATE TABLE hotels (
