@@ -189,7 +189,7 @@ $result = mysqli_query($conn, $query);
 						<p class="card-text">Rooms available: 12/15</p>
 						<p class="card-text">Cottages available: 2/5</p>
 						<p class="card-text">Price: ₱1500/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
+						<a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
 					</div>
 					</div>
 				</div>
@@ -211,7 +211,7 @@ $result = mysqli_query($conn, $query);
 		  <p class="card-text">Description: <?php echo $row['description']; ?></p>
 
           <p class="card-text">Price: <?php echo $row['price']; ?>/night</p>
-          <a href="#" class="btn btn-primary">Make a reservation</a>
+          <a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'views/login.php'; ?>" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
     </div>
