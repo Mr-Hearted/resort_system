@@ -66,6 +66,22 @@ $result = mysqli_query($conn, $query);
 								<input type="number" name="hotel_rating" id="hotel_rating" class="form-control" min="1" max="5" required>
 							</div>
 							<div class="form-group">
+								<label for="room_type">Room Type:</label>
+								<select name="room_type" id="room_type">
+  									<option value="Standard Room">Standard Room</option>
+  									<option value="Deluxe Room">Deluxe Room</option>
+  									<option value="Family Size Room">Family Size Room</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="cottage_type">Cottage Type:</label>
+								<select name="cottage_type" id="cottage_type">
+  									<option value="Standard Cottage">Standard Cottage</option>
+  									<option value="Deluxe Cottage">Deluxe Cottage</option>
+  									<option value="None">None</option>
+								</select>
+							</div>
+							<div class="form-group">
 								<label for="hotel_description">Resort Description:</label>
 								<textarea name="hotel_description" id="hotel_description" class="form-control" rows="5" required></textarea>
 							</div>

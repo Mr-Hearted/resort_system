@@ -7,6 +7,8 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+$image_path = dirname(__DIR__) . '/images/hotels/';
+
 if (isset($_POST['submit'])) {
     $hotel_name = $_POST['hotel_name'];
     $hotel_address = $_POST['hotel_address'];
@@ -14,6 +16,8 @@ if (isset($_POST['submit'])) {
     $hotel_phone = $_POST['hotel_phone'];
     $hotel_price = $_POST['hotel_price'];
     $hotel_rating = $_POST['hotel_rating'];
+    $room_type = $_POST['room_type'];
+    $cottage_type = $_POST['cottage_type'];
     $hotel_description = $_POST['hotel_description'];
 
     // Check if hotel image is uploaded
@@ -23,7 +27,7 @@ if (isset($_POST['submit'])) {
         $file_tmp = $_FILES['hotel_image']['tmp_name'];
         $file_type = $_FILES['hotel_image']['type'];
         $file_ext = strtolower(end(explode('.', $_FILES['hotel_image']['name'])));
-
+        
         $extensions = array("jpeg", "jpg", "png");
 
         if (in_array($file_ext, $extensions) === false) {
@@ -35,7 +39,7 @@ if (isset($_POST['submit'])) {
         }
 
         if (empty($errors) == true) {
-            move_uploaded_file($file_tmp, "../images/hotels/" . $file_name);
+            move_uploaded_file($file_tmp, $image_path . $file_name);
             $image_url = "images/hotels/" . $file_name;
         } else {
             print_r($errors);
@@ -45,9 +49,9 @@ if (isset($_POST['submit'])) {
     }
 
     // Insert hotel information into the database
-    $query = "INSERT INTO hotels(name, address, rooms, phone, price, rating, description, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    $query = "INSERT INTO hotels(name, address, rooms, phone, price, rating, description, image, room_type, cottage_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssssssss", $hotel_name, $hotel_address, $hotel_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url);
+    $stmt->bind_param("ssssssssss", $hotel_name, $hotel_address, $hotel_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url, $room_type, $cottage_type);
 
     if ($stmt->execute()) {
         header("Location: ../index.php");

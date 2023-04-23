@@ -53,7 +53,7 @@ $result = mysqli_query($conn, $query);
 	<div class="container my-4">
 	<div class="row mb-4">
 		<div class="col-md-8">
-		<form class="form-inline">
+		<form action="search.php" nethod="GET"class="form-inline">
 			<div class="form-group mr-2">
 			<div class="input-group">
 				<div class="input-group-prepend">
@@ -166,10 +166,9 @@ $result = mysqli_query($conn, $query);
           <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>
           <p class="card-text">Location: <?php echo $row['address']; ?></p>
           <p class="card-text">Rooms available: <?php echo $row['rooms']; ?></p>
-		  <p class="card-text">Contact Info: <?php echo $row['phone']; ?></p>
-		  <p class="card-text">Description: <?php echo $row['description']; ?></p>
-
-          <p class="card-text">Price: <?php echo $row['price']; ?>/night</p>
+		  <p class="card-text">Room Type: <?php echo $row['room_type']; ?></p>
+		  <p class="card-text">Cottage: <?php echo $row['cottage_type']; ?></p>
+          <p class="card-text">Price: ₱<?php echo $row['price']; ?>/night</p>
           <a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'views/login.php'; ?>" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
