@@ -3,7 +3,7 @@
 session_start();
 
 // If user is not logged in, redirect to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
     header("location: login.php");
     exit;
 }
@@ -71,6 +71,7 @@ $result = mysqli_query($conn, $query);
   									<option value="Standard Room">Standard Room</option>
   									<option value="Deluxe Room">Deluxe Room</option>
   									<option value="Family Size Room">Family Size Room</option>
+									  <option value="None">None</option>
 								</select>
 							</div>
 							<div class="form-group">

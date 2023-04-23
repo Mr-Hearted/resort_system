@@ -3,10 +3,11 @@
 session_start();
 
 // If user is not logged in, redirect to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
     header("location: login.php");
     exit;
 }
+
 // Connect to the database
 $conn = mysqli_connect("localhost", "root", "", "login_system");
 
@@ -15,9 +16,16 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Retrieve hotels data
-$query = "SELECT * FROM hotels";
-$result = mysqli_query($conn, $query);
+if (isset($_GET['hotel_id'])) {
+    $hotel_id = $_GET['hotel_id'];
+    $query = "SELECT * FROM hotels WHERE id = $hotel_id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+}
+else {
+    $row = array(); // Define an empty array to avoid "Undefined variable" error
+}
+  
 
 ?>
 <!DOCTYPE html>
@@ -34,9 +42,9 @@ $result = mysqli_query($conn, $query);
 </head>
 <body>
     <div class="container mt-4">
-        <h2>Create Reservation - Resort</h2>
+        <h2>Create Reservation<?php if (!empty($row)) echo " - " . $row["name"]; ?></h2>
 
-        <form>
+        <form method="post" action="../php/insert_reservation.php">
             <div class="form-group">
                 <label for="checkInDate">Check-in date:</label>
                 <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
@@ -53,25 +61,26 @@ $result = mysqli_query($conn, $query);
             </div>
 
             <div class="form-group">
-                <label for="roomType">Room type:</label>
-                <select class="form-control" id="roomType" name="roomType" required>
+                <label for="room_type">Room type:</label>
+                <select class="form-control" id="room_type" name="room_type" required>
                     <option value="">Select room type</option>
-                    <option value="standard">Standard Room</option>
-                    <option value="deluxe">Deluxe Room</option>
-                    <option value="suite">None</option>
+                    <option value="Standard Room">Standard Room</option>
+                    <option value="Deluxe Room">Deluxe Room</option>
+                    <option value="Family Size Room">Family Size Room</option>
+                    <option value="None">None</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="roomType">Cottage type:</label>
-                <select class="form-control" id="roomType" name="roomType" required>
+                <label for="cottage_type">Cottage type:</label>
+                <select class="form-control" id="cottage_type" name="cottage_type" required>
                     <option value="">Select room type</option>
-                    <option value="standard">Standard Cottage</option>
-                    <option value="deluxe">Deluxe Cottage</option>
-                    <option value="suite">None</option>
+                    <option value="Standard Cottage">Standard Cottage</option>
+                    <option value="Deluxe Cottage">Deluxe Cottage</option>
+                    <option value="None">None</option>
                 </select>
             </div>
-
+            <input type="hidden" name="hotel_id" value="<?php echo $_GET['hotel_id']; ?>">
             <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Create Reservation</button>
         </form>
     </div>

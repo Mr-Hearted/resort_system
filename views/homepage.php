@@ -3,7 +3,7 @@
 session_start();
 
 // If user is not logged in, redirect to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
     header("location: login.php");
     exit;
 }
@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $query);
 </head>
 <body class="home-body">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Resort and Management Reservation System</a>
+		<a class="navbar-brand" href="homepage.php">Resort and Management Reservation System</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -50,7 +50,7 @@ $result = mysqli_query($conn, $query);
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a class="nav-link" href="favorite.php">
 						<i class="far fa-heart"></i> Favorites
 					</a>
 				</li>
@@ -62,111 +62,100 @@ $result = mysqli_query($conn, $query);
 	</nav>
 	
 	<div class="container my-4">
-	<div class="row mb-4">
-		<div class="col-md-8">
-		<form class="form-inline">
-			<div class="form-group mr-2">
-			<div class="input-group">
-				<div class="input-group-prepend">
-				<div class="input-group-text"><i class="fas fa-search"></i></div>
+    <div class="row mb-4">
+        <div class="d-flex align-items-center">
+            <form class="form-inline" method="GET" action="">
+                <div class="form-group mr-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-search"></i></div>
+                        </div>
+                        <input type="text" class="form-control" name="query" placeholder="Search">
+                    </div>
+                </div>
+                <div class="form-group mr-2">
+                    <select class="form-control" name="room_type">
+                        <option value="">Room Type</option>
+                        <option value="Standard Room">Standard Room</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Family Size">Family Size</option>
+                    </select>
+                </div>
+                <div class="form-group mr-2">
+                    <select class="form-control" name="cottage_type">
+                        <option value="">Cottage Type</option>
+                        <option value="Standard Cottage">Standard Room</option>
+                        <option value="Deluxe Cottage">Deluxe Room</option>
+                        <option value="None">None</option>
+                    </select>
+                </div>
+                <div class="form-group mr-2">
+                    <select class="form-control" name="price">
+                        <option value="">Price</option>
+                        <option value="100-500">100-500</option>
+                        <option value="500-1000">500-1000</option>
+                        <option value="1000-1500">1000-1500</option>
+                        <option value="1500-2000">1500-2000</option>
+                    </select>
+                </div>
+				<div class="form-group mr-2">
+                	<button type="submit" class="btn btn-primary btn-light">Search</button>
 				</div>
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-			</div>
-			<div class="form-group mr-2">
-			<div class="dropdown">
-				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-bed"></i> Rooms
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
-				<!-- Room options here -->
-					<a class="dropdown-item" href="#">Standand Room</a>
-					<a class="dropdown-item" href="#">Deluxe Room</a>
-					<a class="dropdown-item" href="#">Family Size Room</a>
-				</div>
-			</div>
-			</div>
-			<div class="form-group mr-2">
-			<div class="dropdown">
-				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownRooms" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-home mr-2"></i> Cottage
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownRooms">
-				<!-- Cottage options here -->
-					<a class="dropdown-item" href="#">Standard Room</a>
-					<a class="dropdown-item" href="#">Deluxe Room</a>
-					<a class="dropdown-item" href="#">None</a>
-				</div>
-			</div>
-			</div>
-			<div class="form-group mr-2">
-			<div class="dropdown">
-				<button class="btn btn-outline-secondary btn-light dropdown-toggle" type="button" id="dropdownPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-dollar-sign"></i> Price
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownPrice">
-				<!-- Price options here -->
-					<a class="dropdown-item" href="#">100-500</a>
-					<a class="dropdown-item" href="#">500-1000</a>
-					<a class="dropdown-item" href="#">1000-1500</a>
-					<a class="dropdown-item" href="#">1500-2000</a>
-				</div>
-			</div>
-			</div>
-			<button type="submit" class="btn btn-primary btn-light">Search</button>
-		</form>
-		</div>
-	</div>
-	<div class="row">
-		<div class="row mt-4">
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="../img/fabio-fistarol-qai_Clhyq0s-unsplash.jpg" class="card-img-top" alt="Resort 1">
-					<div class="card-body">
-						<h5 class="card-title">Resort 1</h5>
-						<p class="card-text">Rating: 4.5 stars</p>
-						<p class="card-text">Location: Forest</p>
-						<p class="card-text">Rooms available: 10/15</p>
-						<p class="card-text">Cottages available: 5/5</p>
-						<p class="card-text">Price: ₱500/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="../img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" class="card-img-top" alt="Resort 2">
-					<div class="card-body">
-						<h5 class="card-title">Resort 2</h5>
-						<p class="card-text">Rating: 4.2 stars</p>
-						<p class="card-text">Location: Mountain view</p>
-						<p class="card-text">Rooms available: 8/10</p>
-						<p class="card-text">Cottages available: 3/5</p>
-						<p class="card-text">Price: ₱1000/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-4">
-					<div class="card shadow">
-					<img src="../img/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" class="card-img-top" alt="Resort 3">
-					<div class="card-body">
-						<h5 class="card-title">Resort 3</h5>
-						<p class="card-text">Rating: 4.8 stars</p>
-						<p class="card-text">Location: Beachfront</p>
-						<p class="card-text">Rooms available: 12/15</p>
-						<p class="card-text">Cottages available: 2/5</p>
-						<p class="card-text">Price: ₱1500/night</p>
-						<a href="#" class="btn btn-primary">Make a reservation</a>
-					</div>
-					</div>
-				</div>
-		<!-- Repeat above image card divs to add more images -->
-	</div>
-	</div>
+            </form>
+        </div>
+    </div>
 
-	<!-- Display hotels data -->
+	<?php
+
+// Retrieve search parameters from GET request
+$query = isset($_GET['query']) ? $_GET['query'] : '';
+$room_type = isset($_GET['room_type']) ? $_GET['room_type'] : '';
+$cottage_type = isset($_GET['cottage_type']) ? $_GET['cottage_type'] : '';
+$price_range = isset($_GET['price']) ? $_GET['price'] : '';
+
+// Build SQL query based on search parameters
+$sql = "SELECT * FROM hotels WHERE name LIKE '%$query%' AND room_type LIKE '%$room_type%' AND cottage_type LIKE '%$cottage_type%'";
+
+if (!empty($price_range)) {
+	list($min_price, $max_price) = explode('-', $price_range);
+	$sql .= " AND price BETWEEN $min_price AND $max_price";
+  }
+  
+// Execute SQL query and retrieve results
+$result = mysqli_query($conn, $sql);
+
+// Check if there are any matching results
+if (mysqli_num_rows($result) > 0) {
+	
+if (isset($_POST['search'])) {	
+  while ($row = mysqli_fetch_assoc($result)) {
+?>
 <div class="row">
+<div class="col-md-4 mb-4">
+  <div class="card shadow">
+    <img src="../<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $row['name']; ?></h5>
+      <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>
+      <p class="card-text">Location: <?php echo $row['address']; ?></p>
+      <p class="card-text">Rooms available: <?php echo $row['rooms']; ?></p>
+      <p class="card-text">Room Type: <?php echo $row['room_type']; ?></p>
+      <p class="card-text">Cottage: <?php echo $row['cottage_type']; ?></p>
+      <p class="card-text">Price: ₱<?php echo $row['price']; ?>/night</p>
+      <a href="<?php echo isset($_SESSION['logged_in']) ? 'create-reservation.php?hotel_id=' . $row['id'] : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
+    </div>
+  </div>
+</div>
+  </div>
+<?php
+  }
+}
+}else{
+	echo "<p class='text-white'>No result found.</p>";
+}	
+?>
+
+  <div class="row">
   <?php while ($row = mysqli_fetch_assoc($result)) { ?>
     <div class="col-md-4 mb-4">
       <div class="card shadow">
@@ -179,15 +168,13 @@ $result = mysqli_query($conn, $query);
 		  <p class="card-text">Room Type: <?php echo $row['room_type']; ?></p>
 		  <p class="card-text">Cottage: <?php echo $row['cottage_type']; ?></p>
           <p class="card-text">Price: ₱<?php echo $row['price']; ?>/night</p>
-          <a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
+          <a href="<?php echo isset($_SESSION['logged_in']) ? 'create-reservation.php?hotel_id=' . $row['id'] : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
     </div>
   <?php } ?>
 </div>
-
 <?php
-// Close connection
 mysqli_close($conn);
 ?>
 

@@ -2,7 +2,7 @@
 	session_start();
 	
 	// Check if the user is already logged in, if yes then redirect to home page
-	if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+	if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
 	    header("location: ../views/homepage.php");
 	    exit;
 	}
@@ -58,7 +58,7 @@
 	                            session_start();
 	                            
 	                            // Store data in session variables
-	                            $_SESSION["loggedin"] = true;
+	                            $_SESSION["logged_in"] = true;
 	                            $_SESSION["id"] = $id;
 	                            $_SESSION["username"] = $username;                            
 	                            
