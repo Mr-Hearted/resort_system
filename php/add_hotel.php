@@ -16,6 +16,8 @@ if (isset($_POST['submit'])) {
     $hotel_phone = $_POST['hotel_phone'];
     $hotel_price = $_POST['hotel_price'];
     $hotel_rating = $_POST['hotel_rating'];
+    $room_type = $_POST['room_type'];
+    $cottage_type = $_POST['cottage_type'];
     $hotel_description = $_POST['hotel_description'];
 
     // Check if hotel image is uploaded
@@ -47,9 +49,9 @@ if (isset($_POST['submit'])) {
     }
 
     // Insert hotel information into the database
-    $query = "INSERT INTO hotels(name, address, rooms, phone, price, rating, description, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    $query = "INSERT INTO hotels(name, address, rooms, phone, price, rating, description, image, room_type, cottage_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssssssss", $hotel_name, $hotel_address, $hotel_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url);
+    $stmt->bind_param("ssssssssss", $hotel_name, $hotel_address, $hotel_room, $hotel_phone, $hotel_price, $hotel_rating, $hotel_description, $image_url, $room_type, $cottage_type);
 
     if ($stmt->execute()) {
         header("Location: ../index.php");

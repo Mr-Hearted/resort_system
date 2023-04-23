@@ -83,7 +83,6 @@ $result = mysqli_query($conn, $query);
 					<a class="dropdown-item" href="#">Standand Room</a>
 					<a class="dropdown-item" href="#">Deluxe Room</a>
 					<a class="dropdown-item" href="#">Family Size Room</a>
-					<a class="dropdown-item" href="#">Family Size Room</a>
 				</div>
 			</div>
 			</div>
@@ -177,9 +176,9 @@ $result = mysqli_query($conn, $query);
           <p class="card-text">Rating: <?php echo $row['rating']; ?> stars</p>
           <p class="card-text">Location: <?php echo $row['address']; ?></p>
           <p class="card-text">Rooms available: <?php echo $row['rooms']; ?></p>
-		  <p class="card-text">Contact Info: <?php echo $row['phone']; ?></p>
-		  <p class="card-text">Description: <?php echo $row['description']; ?></p>
-          <p class="card-text">Price: <?php echo $row['price']; ?>/night</p>
+		  <p class="card-text">Room Type: <?php echo $row['room_type']; ?></p>
+		  <p class="card-text">Cottage: <?php echo $row['cottage_type']; ?></p>
+          <p class="card-text">Price: ₱<?php echo $row['price']; ?>/night</p>
           <a href="<?php echo isset($_SESSION['logged_in']) ? 'reservation.php' : 'login.php'; ?>" class="btn btn-primary">Make a reservation</a>
         </div>
       </div>
